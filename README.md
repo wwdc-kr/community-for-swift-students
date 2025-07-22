@@ -2,4 +2,4 @@
 
 CCS is managed by WWDC Winners Korea
 
-[Website](https://wwdc.kr)
+[🏠Website](https://wwdc.kr)⠀⠀‎⠀⠀[📮Email](mailto:wwdc.scholars.kr@gmail.com)
