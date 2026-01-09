@@ -1,1 +1,9 @@
 .DS_Store
+# Xcode / SwiftPM generated
+.swiftpm/xcode/
+.swiftpm/playgrounds/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+DerivedData/
+.build/
