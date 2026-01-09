@@ -5,14 +5,7 @@ import Vision
 
 struct WorkshopCompleteView: View {
 
-    @State private var results: [ClassificationResult] = []
     @State private var visibleHints: Set<Int> = []
-
-    // Workshop에서 만든 클래스들 사용
-    let modelLoader = CoreMLModelLoader()
-    let resultProcessor = ResultProcessor()
-    let classifier = ImageClassifier()
-    let canvasView = PencilKitCanvasView()
 
     var body: some View {
         ScrollView {
@@ -246,8 +239,7 @@ struct WorkshopCompleteView: View {
             HStack(spacing: 20) {
             // 왼쪽: Canvas (PencilKit)
             ZStack {
-                // MARK: - PencilKitWorkshop에서 정의한 PencilKitCanvasView 추가
-                canvasView
+                // TODO: - PencilKitCanvasView 추가
 
                 VStack {
                     Spacer()
@@ -317,12 +309,21 @@ struct WorkshopCompleteView: View {
             }
         }
     }
+    
+    // Workshop에서 만든 클래스들 사용
+    let modelLoader = CoreMLModelLoader()
+    let resultProcessor = ResultProcessor()
+    let classifier = ImageClassifier()
+    let canvasView = PencilKitCanvasView()
+    
+    // 모델 분류 결과
+    @State private var results: [ClassificationResult] = []
 
     // MARK: - CoreMLVisionWorkshop의 클래스들을 사용한 분류
     private func classifyDrawing() throws {
         /*
-         1. CoreMLModelLoader를 생성하고, 모델 로드
-         2. 생성한 CoreMLModelLoader로 VNCoreMLModel 생성
+         1. CoreMLModelLoader를 사용해 모델 로드
+         2. CoreMLModelLoader로 VNCoreMLModel 생성
          3. PencilKitCanvasView의 convertToImage() 사용
          4. ImageClassifier로 CIImage 변환
          5. ImageClassifier로 분류 요청 생성
