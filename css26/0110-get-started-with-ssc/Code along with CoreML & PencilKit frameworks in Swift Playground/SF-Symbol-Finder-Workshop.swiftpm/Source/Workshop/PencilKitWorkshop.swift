@@ -41,7 +41,7 @@ import PencilKit
 
 struct PencilKitCanvasView: UIViewRepresentable {
     
-    let canvas = PKCanvasView()
+    var canvas = PKCanvasView()
     
     /*
      TODO: PKCanvasView를 설정하고 반환하는 makeUIView 메소드 구현
