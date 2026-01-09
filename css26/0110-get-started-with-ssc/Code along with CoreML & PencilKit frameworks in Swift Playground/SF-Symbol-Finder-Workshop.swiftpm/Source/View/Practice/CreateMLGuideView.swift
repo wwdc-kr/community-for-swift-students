@@ -5,9 +5,8 @@ struct CreateMLGuideView: View {
         ScrollView {
             VStack(alignment: .leading, spacing: 25) {
                 headerSection
-                methodSection
+                Divider()
                 stepsSection
-                datasetSection
             }
             .padding(50)
         }
@@ -16,123 +15,97 @@ struct CreateMLGuideView: View {
     
     private var headerSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Xcode에 내장된 머신러닝 모델 생성 도구입니다. 코드 없이 GUI로 모델을 학습할 수 있습니다.")
-                .font(.subheadline)
-                .foregroundColor(.secondary)
-        }
-    }
-    
-    private var methodSection: some View {
-        VStack(alignment: .leading, spacing: 15) {
-            Text("🎯 학습 방법")
-                .font(.headline)
-            
-            MethodCard(
-                number: 1,
-                title: "CreateML 앱 사용 (권장)",
-                description: "GUI로 쉽게 모델 생성",
-                icon: "app.dashed"
-            )
-            
-            MethodCard(
-                number: 2,
-                title: "Swift 코드 사용",
-                description: "프로그래밍 방식으로 모델 학습",
-                icon: "chevron.left.forwardslash.chevron.right"
-            )
+            HStack {
+                Image("create_ml")
+                    .resizable()
+                    .frame(width: 40, height: 40)
+                
+                Text("CreateML")
+                    .font(.largeTitle)
+                    .bold()
+            }
+            Text("Create ML은 강력한 Core ML 모델을 생성하면서 모델 학습의 복잡성을 해소합니다.")
+            Text("Create ML takes the complexity out of model training while producing powerful Core ML models.")
+                .font(.callout)
+                .foregroundStyle(.gray)
         }
     }
     
     private var stepsSection: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("📝 CreateML 앱 사용 단계")
-                .font(.headline)
+            Text("모델은 이렇게 만들 수 있어요")
+                .font(.title2)
+                .bold()
             
             StepCard(
                 step: 1,
                 title: "CreateML 앱 실행",
-                description: "Xcode → Open Developer Tool → Create ML"
-            )
+                description: "Create New Project")
+            makeImage(name: "1")
             
             StepCard(
                 step: 2,
                 title: "프로젝트 생성",
-                description: "Image Classifier 선택"
-            )
+                description: "Image Classification")
+            makeImage(name: "2")
+            makeImage(name: "3")
+            makeImage(name: "4")
             
             StepCard(
                 step: 3,
-                title: "데이터셋 추가",
-                description: "Training Data 폴더 드래그"
-            )
+                title: "데이터셋 생성",
+                description: "폴더명이 label이 되고, 해당 경로에 학습할 데이터를 추가합니다.")
+            datasetSection
+            makeImage(name: "5")
+            makeImage(name: "6")
             
             StepCard(
                 step: 4,
-                title: "파라미터 설정",
-                description: "Max Iterations, Augmentation 설정"
-            )
+                title: "[Settings] 학습 데이터셋 추가 및 파라미터 설정",
+                description: "Max Iterations, Augmentation 설정")
+            makeImage(name: "7")
             
             StepCard(
                 step: 5,
-                title: "학습 시작",
-                description: "Train 버튼 클릭"
-            )
+                title: "[Training] 모델 학습",
+                description: "▶ 버튼 클릭")
+            makeImage(name: "8")
             
             StepCard(
                 step: 6,
-                title: "모델 내보내기",
-                description: "Output 탭에서 .mlmodel 저장"
-            )
+                title: "[Preview] 결과 확인",
+                description: "새로운 테스트데이터를 추가해서 결과를 확인할 수 있습니다.")
+            makeImage(name: "9")
+            makeImage(name: "10")
+            
+            StepCard(
+                step: 7,
+                title: "[Output] 모델 내보내기",
+                description: "􀈄 get 버튼을 눌러 .mlmodel 저장")
+            makeImage(name: "11")
         }
+    }
+    private func makeImage(name: String) -> some View {
+        Image(name)
+            .resizable()
+            .scaledToFit()
+            .frame(width: 700)
     }
     
     private var datasetSection: some View {
         VStack(alignment: .leading, spacing: 15) {
-            Text("📂 데이터셋 구조")
-                .font(.headline)
-            
             VStack(alignment: .leading, spacing: 8) {
-                Text("TrainingData/")
-                    .font(.system(.body, design: .monospaced))
-                    .foregroundColor(.blue)
-                
-                Text("├── class1/")
-                    .font(.system(.body, design: .monospaced))
-                    .padding(.leading, 20)
-                
-                Text("│   ├── image1.jpg")
-                    .font(.system(.body, design: .monospaced))
-                    .foregroundColor(.secondary)
-                    .padding(.leading, 40)
-                
-                Text("│   └── image2.jpg")
-                    .font(.system(.body, design: .monospaced))
-                    .foregroundColor(.secondary)
-                    .padding(.leading, 40)
-                
-                Text("├── class2/")
-                    .font(.system(.body, design: .monospaced))
-                    .padding(.leading, 20)
-                
-                Text("└── class3/")
-                    .font(.system(.body, design: .monospaced))
-                    .padding(.leading, 20)
+                FileTreeItem(icon: "folder.fill", name: "TrainingData/", color: .blue, level: 0)
+                FileTreeItem(icon: "folder.fill", name: "class1/", color: .white, level: 1)
+                FileTreeItem(icon: "photo.fill", name: "image1", color: .secondary, level: 2)
+                FileTreeItem(icon: "photo.fill", name: "image2", color: .secondary, level: 2)
+                FileTreeItem(icon: "folder.fill", name: "class2/", color: .white, level: 1)
+                FileTreeItem(icon: "folder.fill", name: "class3/", color: .white, level: 1)
             }
             .padding()
             .background(Color.gray.opacity(0.1))
             .cornerRadius(8)
-            
-            Text("권장사항:")
-                .font(.subheadline)
-                .fontWeight(.semibold)
-            
-            VStack(alignment: .leading, spacing: 5) {
-                Text("• 각 클래스당 최소 10장, 권장 50-100장")
-                Text("• 다양한 각도, 조명, 배경 포함")
-                Text("• 이미지 크기 통일 (선택사항)")
-            }
-            .font(.caption)
-            .foregroundColor(.secondary)
+            .font(.system(.body, design: .monospaced))
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }

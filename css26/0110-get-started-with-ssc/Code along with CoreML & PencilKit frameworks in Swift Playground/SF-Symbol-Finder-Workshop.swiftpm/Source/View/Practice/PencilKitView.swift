@@ -19,7 +19,7 @@ struct PencilKitWorkshopView: View {
             .padding(50)
             .frame(maxWidth: .infinity)
         }
-        .navigationTitle("PencilKit Workshop")
+        .navigationTitle("PencilKit")
     }
 
     private var headerSection: some View {
@@ -31,7 +31,6 @@ struct PencilKitWorkshopView: View {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
-        .frame(maxWidth: .infinity)
     }
 
     private var instructionSection: some View {

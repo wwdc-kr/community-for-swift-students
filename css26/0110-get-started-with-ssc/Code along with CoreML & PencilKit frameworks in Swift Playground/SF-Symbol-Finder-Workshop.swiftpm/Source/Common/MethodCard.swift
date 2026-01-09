@@ -24,6 +24,7 @@ struct MethodCard: View {
                     .font(.callout)
                     .foregroundColor(.secondary)
             }
+            .padding(.trailing)
         }
         .padding()
         .background(Color.blue.opacity(0.05))

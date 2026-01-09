@@ -7,32 +7,13 @@ SF Symbol Finder를 기반으로 만들어진 Swift Playgrounds 프로젝트입�
 ## ⚙️ 요구사항
 
 ### 이런 것들이 필요해요
-- Xcode 또는 Swift Playgrounds 앱이 설치된
+- Swift Playgrounds 앱이 설치된
 - 맥 또는 아이패드
+- ⚠️ 이 프로젝트는 **Swift Playgrounds 앱 형식** (.swiftpm)을 기준으로 만들어졌습니다.
 
 ### 이런 것들을 알고 계시면 좋아요
 - Swift 기본 문법 
 - SwiftUI 기초
-
----
-
-## ⚠️ 빌드 방법
-
-이 프로젝트는 **Swift Playgrounds 앱 형식** (.swiftpm)을 기준으로 만들어졌습니다.
-
-### ✅ 실행 방법
-
-**방법 1: Swift Playgrounds 앱 사용 (권장)**
-```bash
-# Swift Playgrounds 앱으로 열기 (iPad/Mac)
-open SF-Symbol-Finder-Workshop.swiftpm
-```
-
-**방법 2: Xcode에서 열기**
-```bash
-# Xcode로 프로젝트 열기
-open -a Xcode SF-Symbol-Finder-Workshop.swiftpm
-```
 
 ---
 
@@ -41,19 +22,28 @@ open -a Xcode SF-Symbol-Finder-Workshop.swiftpm
 ```
 Workshop.swiftpm/
 ├── README.md
-├── App.swift                          
-├── ContentView.swift                          
 |
-└── View                  
-    ├── OverviewView.swift                 # 개요
-    ├── PencilKitWorkshopView.swift        # PencilKit UI
-    ├── CoreMLVisionWorkshopView.swift     # CoreML UI
-    └── CreateMLGuideView.swift            # CreateML 가이드
-|
-└── Practice
-    ├──
-    ├── PencilKitWorkshop.swift            # PencilKit 핸즈온 (TODO)
-    └── CoreMLVisionWorkshop.swift         # CoreML 핸즈온 (TODO)
+└── Source
+    ├── ContentView.swift
+    ├── MyApp.swift                          
+    ├── SFSymbolClassifier.swift
+    |
+    └── Common 
+    |
+    └── View             
+        └── Overview     
+             ├── OverviewView.swift            # 개요
+             ├── SFSymbolsFinderView.swift     # SF Symbols 데모       
+        └── Practice
+             ├── PencilKitView.swift           # PencilKit UI
+             ├── CoreMLVisionView.swift        # CoreML UI
+             └── CreateMLGuideView.swift       # CreateML 가이드
+    |
+    └── Workshop                               # 👈 TODO!
+        ├── CoreMLVisionWorkshop.swift         # CoreML 핸즈온 (TODO)
+        ├── PencilKitWorkshop.swift            # PencilKit 핸즈온 (TODO)
+        └── WorkshopCompleteView.swift         # 핸즈온 통합 화면 (TODO)
+        
 ```
 
 ### 플레이스홀더 메소드

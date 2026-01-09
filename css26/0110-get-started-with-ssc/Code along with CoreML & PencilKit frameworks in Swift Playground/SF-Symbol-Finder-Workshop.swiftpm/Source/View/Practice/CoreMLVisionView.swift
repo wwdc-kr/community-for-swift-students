@@ -7,7 +7,7 @@ struct CoreMLVisionWorkshopView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 30) {
+            VStack(alignment: .leading, spacing: 50) {
                 headerSection
                 
                 mainClassesSection
@@ -24,7 +24,7 @@ struct CoreMLVisionWorkshopView: View {
             .padding(50)
             .frame(maxWidth: .infinity)
         }
-        .navigationTitle("CoreML + Vision Workshop")
+        .navigationTitle("CoreML + Vision")
     }
 
     private var headerSection: some View {
@@ -36,7 +36,6 @@ struct CoreMLVisionWorkshopView: View {
                 .font(.subheadline)
                 .foregroundColor(.secondary)
         }
-        .frame(maxWidth: .infinity)
     }
 
     private var instructionSection: some View {

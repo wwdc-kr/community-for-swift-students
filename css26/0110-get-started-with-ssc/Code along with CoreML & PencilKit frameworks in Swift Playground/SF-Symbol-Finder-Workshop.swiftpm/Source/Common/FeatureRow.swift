@@ -21,9 +21,10 @@ struct FeatureRow: View {
 
             VStack(alignment: .leading, spacing: 10) {
                 Text(title)
-                    .fontWeight(.semibold)
+                    .font(.title3)
+                    .fontWeight(.bold)
                 Text(description)
-                    .font(.callout)
+                    .font(.subheadline)
                     .foregroundColor(.secondary)
             }
         }
