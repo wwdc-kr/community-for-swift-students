@@ -9,6 +9,10 @@ Community for Swift Students (CSS)
 ## 이벤트 안내
 [안내 및 참가등록](https://luma.com/390vq8re)
 
+### 자료 공유
+
+이벤트 세션 자료 (키노트 및 추가자료)는 이벤트 참가자 분들께만 이메일로 전달됩니다.
+
 ## Swift Student Challenge 자격 요건
 
 ​이미 풀타임 개발자로 고용되어 있는 경우 Swift Student Challenge에 지원할 수 없습니다. 또한 앱 플레이그라운드 제출 시점에 다음과 같은 요건을 충족해야 합니다.
