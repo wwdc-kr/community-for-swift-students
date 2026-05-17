@@ -5,8 +5,6 @@ Date: 2026.04.13 (Mon.)
 Targets: Anyone who has try! Swift Tokyo ticket, especially Japanese students
 ---
 
-👉🏼 [세션 키노트 PDF 보기 (Keynote)]()
-
 try! Swift Tokyo에 참가하는 일본 학생분들께 한국의 Swift 학생 커뮤니티와 올 해의 수상자분들의 프로젝트가 소개되었습니다 👀💡 </br>
 또한 WWDC 워치파티, Swift Mentorship Program 등 WWDC 기간 동안 로컬에서 학생 개발자들이 할 수 있는 활동에 대해 소개해 드렸습니다.</br>
 </br>
