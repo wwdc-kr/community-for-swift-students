@@ -10,6 +10,7 @@
 | 1월 18일 | Swift Student Challenge に向けて準備しよう( 東京🇯🇵) | Apple Japan | 일본, 싱가포르 Swift 학생 커뮤니티와 함께 학생들을 대상으로 Swift Student Challenge 관련 세션 진행 및 지원 격려 |
 | 1월 21일 | Community Organizer Session | Apple Developer Center 🇸🇬 | 11개국 동아시아 커뮤니티 오거나이저와 Apple DR이 모인 세션에서 커뮤니티 소개 및 네트워킹 |
 | 1월 24일 | Getting Started: From Ideas to Apps | Apple Developer Center 🇸🇬 | 일본, 싱가포르 Swift 학생 커뮤니티와 함께 학생들을 대상으로 Swift Student Challenge 관련 세션 진행 및 지원 격려 |
-| 2월 7일 | [Swift Students Cafe (서울🇰🇷)]() | Apple Korea | |
-| 4월 13일 | [try! Swift Tokyo: Crafting Outstanding Apps]() | Tokyo, Japan | |
+| 2월 7일 | [Swift Students Cafe (서울🇰🇷)](https://www.instagram.com/p/DUe1NdRD1D_/?igsh=ZnB6a2pjN2JkMGpp) | Apple Korea | |
+| 4월 13일 | [try! Swift Tokyo: Crafting Outstanding Apps](https://swiftstudents.jp/en/activities/2026-04-13-try-swift-2026) | 도쿄 타치가와 고토부야키홀 | |
+| 6월 8일 | [WWDC26 WATCH PARTY](https://www.instagram.com/p/DZXJaOmm-ug/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==) | 서울 세바시데미코 홀 | |
 | 6월 17일 | [Swift Students Cafe: Iterate on Your Idea (포항 🇰🇷)]() | Apple Developer Academy @ POSTECH | |
